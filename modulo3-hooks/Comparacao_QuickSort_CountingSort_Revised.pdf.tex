@@ -1,0 +1,75 @@
+\documentclass{article}%
+\usepackage[T1]{fontenc}%
+\usepackage[utf8]{inputenc}%
+\usepackage{lmodern}%
+\usepackage{textcomp}%
+\usepackage{lastpage}%
+\usepackage[brazilian]{babel}%
+\usepackage{geometry}%
+\usepackage{graphicx}%
+%
+\title{Comparação entre Quick Sort e Counting Sort}%
+\author{Filipe Exemplo}%
+\date{\today}%
+%
+\begin{document}%
+\normalsize%
+\maketitle%
+\section*{Resumo}%
+\label{sec:Resumo}%
+Este artigo analisa dois algoritmos clássicos de ordenação: Quick Sort e Counting Sort. Exploramos seus funcionamentos, complexidades, prós, contras e exemplos práticos. Além disso, analisamos gráficos que ilustram os desempenhos de ambos com tamanhos crescentes de arrays.
+
+%
+\section{Introdução}%
+\label{sec:Introduo}%
+Os algoritmos de ordenação são ferramentas fundamentais em ciência da computação. Quick Sort e Counting Sort representam duas abordagens distintas: o primeiro utiliza o paradigma de divisão e conquista, enquanto o segundo é baseado em contagem direta de valores.
+
+%
+\section{Quick Sort}%
+\label{sec:QuickSort}%
+Quick Sort é um algoritmo eficiente que particiona recursivamente um array com base em um elemento pivô. Sua eficiência depende da escolha do pivô e do balanceamento dos subarrays.%
+\subsection{Complexidades}%
+\label{subsec:Complexidades}%
+{-} Melhor Caso: O(n log n), ocorre quando o pivô divide igualmente o array.\newline%
+{-} Caso Médio: O(n log n), é a complexidade típica com uma escolha aleatória de pivô.\newline%
+{-} Pior Caso: O(n²), ocorre em arrays já ordenados ou desbalanceados.\newline%
+
+%
+\subsection{Prós e Contras}%
+\label{subsec:PrseContras}%
+Prós:\newline%
+{-} Geralmente eficiente para arrays grandes.\newline%
+{-} Requer espaço adicional mínimo.\newline%
+\newline%
+Contras:\newline%
+{-} Pode ser ineficiente sem otimizações.\newline%
+{-} Não é estável.
+
+%
+\section{Counting Sort}%
+\label{sec:CountingSort}%
+Counting Sort é um algoritmo não comparativo que utiliza contagem direta para ordenar elementos em um intervalo fixo. É eficiente para inteiros pequenos e em intervalos restritos.%
+\subsection{Complexidades}%
+\label{subsec:Complexidades}%
+{-} Todos os Casos: O(n + k), com n sendo o número de elementos e k o intervalo de valores.\newline%
+{-} Espaço Adicional: O(n + k), devido aos arrays auxiliares usados.
+
+%
+\subsection{Prós e Contras}%
+\label{subsec:PrseContras}%
+Prós:\newline%
+{-} Extremamente rápido para intervalos pequenos.\newline%
+{-} Estável, preservando a ordem dos elementos iguais.\newline%
+\newline%
+Contras:\newline%
+{-} Ineficiente para intervalos grandes.\newline%
+{-} Requer mais espaço.
+
+%
+\section{Diferenças e Análise dos Gráficos}%
+\label{sec:DiferenaseAnlisedosGrficos}%
+Os gráficos demonstram o comportamento esperado dos algoritmos. Quick Sort cresce exponencialmente com o tamanho do array, enquanto Counting Sort apresenta crescimento linear dependendo do intervalo. Quick Sort é versátil para qualquer tipo de dado, enquanto Counting Sort é restrito a inteiros com intervalos fixos.%
+\newline \includegraphics[width=\textwidth]{space_for_graphs.png}
+
+%
+\end{document}

@@ -1,0 +1,28 @@
+.mainSlideDiv {
+    display: flex;
+    overflow: hidden;
+}
+
+.slideDiv {
+    height: 300px;
+    width: 80%;
+    margin: 2% 10%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+    border: 1px solid black;
+
+    overflow: hidden;
+}
+
+.buttonsDiv {
+    display: flex;
+    width: 80%;
+    margin: 0 10%;
+    
+    display: flex;
+    justify-content: space-between;
+}
